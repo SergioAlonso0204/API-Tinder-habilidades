@@ -1,4 +1,5 @@
 const Habilidad = require('../models/Habilidad');
+const knex = require('../db/knexfile');
 
 const HabilidadController = {
   getAllHabilidades: async (req, res) => {

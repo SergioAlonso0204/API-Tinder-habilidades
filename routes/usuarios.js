@@ -1,13 +1,14 @@
 const express = require('express');
 const router = express.Router();
-const UserController = require('../controllers/UserController');
+const UsuarioController = require('../controller/UsuarioController');
+const knex = require('../db/knexfile');
 
-router.get('/usuarios', UserController.getAllUsers);
-router.get('/usuarios/:id', UserController.getUserById);
-router.post('/usuarios', UserController.createUser);
-router.put('/usuarios/:id', UserController.updateUser);
-router.delete('/usuarios/:id', UserController.deleteUser);
+router.get('/usuarios', UsuarioController.getAllUsuarios);
+router.get('/usuarios/:id', UsuarioController.getUsuarioById);
+router.post('/usuarios', UsuarioController.createUsuario);
+router.put('/usuarios/:id', UsuarioController.updateUsuario);
+router.delete('/usuarios/:id', UsuarioController.deleteUsuario);
 
-router.get('/usuarios/:id/habilidades', UserController.getUserHabilidades);
+router.get('/usuarios/:id/habilidades', UsuarioController.getUserHabilidades);
 
 module.exports = router;

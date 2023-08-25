@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
-const HabilidadController = require('../controllers/HabilidadController');
+const knex = require('../db/knexfile');
+const HabilidadController = require('../controller/HabilidadController');
 
 router.get('/habilidades', HabilidadController.getAllHabilidades);
 router.post('/habilidades', HabilidadController.createHabilidad);

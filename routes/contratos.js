@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const ContratoController = require('../controllers/ContratoController');
+const ContratoController = require('../controller/ContratoController');
 
 router.post('/contratos', ContratoController.createContrato);
 
